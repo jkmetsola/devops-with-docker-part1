@@ -1,0 +1,5 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+b95dbc7bca29   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 3 minutes ago             optimistic_lichterman
+fead80c17ba4   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 seconds ago             gifted_cerf
+4893e82ef451   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp    xenodochial_golick

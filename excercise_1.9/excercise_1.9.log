@@ -1,0 +1,2 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1/excercise_1.9 (master) $ touch text.log
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1/excercise_1.9 (master) $ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" -d devopsdockeruh/simple-web-service:ubuntu

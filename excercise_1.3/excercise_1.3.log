@@ -1,0 +1,24 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker run -d devopsdockeruh/simple-web-service:ubuntu
+73f786942695848d87d2df5a97a24439e61395e4435f6821e514e5667362bd28
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED          STATUS          PORTS     NAMES
+73f786942695   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   12 seconds ago   Up 11 seconds             focused_wu
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker exec -it 73f786942695 bash
+root@73f786942695:/usr/src/app# tail -f ./text.log
+2023-05-24 13:48:14 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-24 13:48:16 +0000 UTC
+2023-05-24 13:48:18 +0000 UTC
+2023-05-24 13:48:20 +0000 UTC
+2023-05-24 13:48:22 +0000 UTC
+2023-05-24 13:48:24 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-24 13:48:26 +0000 UTC
+2023-05-24 13:48:28 +0000 UTC
+2023-05-24 13:48:30 +0000 UTC
+2023-05-24 13:48:32 +0000 UTC
+2023-05-24 13:48:34 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-24 13:48:36 +0000 UTC
+^C
+root@73f786942695:/usr/src/app# 

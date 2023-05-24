@@ -1,0 +1,16 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker run -it ubuntu
+root@443a301c09ae:/# apt-get update > /dev/null && apt-get -y install curl > /dev/null
+debconf: delaying package configuration, since apt-utils is not installed
+root@443a301c09ae:/# sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
+
+root@443a301c09ae:/# sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl -L helsinki.html http://$website; done'

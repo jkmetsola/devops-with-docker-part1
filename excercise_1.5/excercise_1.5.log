@@ -1,0 +1,23 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              latest    3b418d7b466a   4 weeks ago   77.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB
+
+
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker run -d devopsdockeruh/simple-web-service:alpine
+3883753b8153ea20328d629234a89baa97813ea3d182d77d98a688c9d4d5cc80
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker exec -it 3883753b8153ea20328d629234a89baa97813ea3d182d77d98a688c9d4d5cc80 sh
+/usr/src/app # ls
+server    text.log
+/usr/src/app # cat text.log 
+2023-05-24 14:25:00 +0000 UTC
+2023-05-24 14:25:02 +0000 UTC
+2023-05-24 14:25:04 +0000 UTC
+2023-05-24 14:25:06 +0000 UTC
+2023-05-24 14:25:08 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-05-24 14:25:10 +0000 UTC
+2023-05-24 14:25:12 +0000 UTC
+2023-05-24 14:25:14 +0000 UTC
+/usr/src/app # 

@@ -1,0 +1,30 @@
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+b95dbc7bca296d80cd8d53986ea6a2203ec578c641e7125ccea9717a7d8b8647
+fead80c17ba443374d0d2f3d96bc33f8c39e1e6589dbcd850d107056a56a8e1d
+4893e82ef451e236d9412635f288d22be519aee90166e065715908f01790493f
+
+Total reclaimed space: 3.279kB
+
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker image prune -a
+WARNING! This will remove all images without at least one container associated to them.
+Are you sure you want to continue? [y/N] y
+Deleted Images:
+untagged: nginx:latest
+untagged: nginx@sha256:f5747a42e3adcb3168049d63278d7251d91185bb5111d2563d58729a5c9179b0
+deleted: sha256:a7be6198544f09a75b26e6376459b47c5b9972e7aa742af9f356b540fe852cd4
+deleted: sha256:b142903ff5d25e779c293678ce1bb71604778bc243cda8c26180675454fbf11c
+deleted: sha256:185fa8597cdc03f83ab9ec3fe21d8ac6fbe49fa65cf8422f05d1d07b06b25fce
+deleted: sha256:1e3de4dfc3a245258917d9cd0860bd30969e1b430ecba95b1eaf2666d8882d24
+deleted: sha256:95b14e2b8329c1fcec4e1df001aac4874bc2247281ae96cdfe355847faf4caa9
+deleted: sha256:8566a5cb57a5d27b0eba5d952429bc542c05853014dc2c8f362540e7533fbff9
+deleted: sha256:8cbe4b54fa88d8fc0198ea0cc3a5432aea41573e6a0ee26eca8c79f9fbfa40e3
+
+
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+jmetsola@N-T495PF1B5ZY8 ~/projects/devops-with-docker-part1 (master) $ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
